@@ -3,6 +3,7 @@ bin/
 bin-debug/
 bin-release/
 out/
+.swc
 
 # Other files and folders
 .settings/
