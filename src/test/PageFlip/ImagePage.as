@@ -35,14 +35,14 @@ public class ImagePage extends Image
 
 
 
-        public function swapTexture(newTexture:Texture, setUpwards:Boolean = false):void
+        public function swapTexture(newTexture:Texture):void//, setUpwards:Boolean = false):void
         {
             this.texture = newTexture;
             readjustSize();
-            if(setUpwards)
-                setLocation(0);
-            else
-                setLocation(1);
+//            if(setUpwards)
+//                setLocation(0);
+//            else
+//                setLocation(1);
 
             initialHeight = super.height;
             initialWidth = super.width;

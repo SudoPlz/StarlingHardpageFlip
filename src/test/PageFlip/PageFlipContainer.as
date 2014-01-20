@@ -4,7 +4,9 @@ package test.PageFlip
     import starling.display.DisplayObject;
 
     import starling.display.Image;
-	import starling.display.Sprite;
+import starling.display.Quad;
+import starling.display.QuadBatch;
+import starling.display.Sprite;
 	import starling.events.Event;
     import starling.textures.RenderTexture;
     import starling.textures.Texture;
@@ -38,9 +40,12 @@ package test.PageFlip
         private var nextPage:int;
         private var currentPage:int;
 
-//        private var topImage:ImagePage;
         private var cacheImage:ImagePage;
         private var flipImage:ImagePage;
+        private var quadBatch:QuadBatch;
+        private var useQuad:Boolean = false;
+
+
 
 		/**@private*/
 		public function PageFlipContainer(pages:Vector.<DisplayObject>,bookWidth:Number,bookHeight:Number,startOnPage:int = 0)
@@ -62,22 +67,6 @@ package test.PageFlip
 			initPage();
 		}
 
-        public function canTurnTo(pageNo:int):Boolean
-        {
-            var valid:Boolean = false;
-            if (pageIsValid(pageNo) && pageNo!=currentPage)
-                valid = true;
-            return valid;
-        }
-
-
-        public function pageIsValid(pageNo:int):Boolean
-        {
-            var valid:Boolean = false;
-            if (pageNo>=0 && pageNo<pageCount)
-                valid = true;
-            return valid;
-        }
 
 
 		/** Init the pages*/
@@ -89,10 +78,19 @@ package test.PageFlip
             {
 
                 cacheImage = new ImagePage(rasterizeDispObj(pages[currentPage]));
-                addChild(cacheImage);
-
                 flipImage = new ImagePage(rasterizeDispObj(pages[currentPage]));
-                addChild(flipImage);
+
+                if(useQuad)
+                {
+                    quadBatch = new QuadBatch();
+                    addChild(quadBatch);
+                }
+                else
+                {
+                    addChild(cacheImage);
+                    addChild(flipImage);
+                }
+
             }
             else
                 throw new Error ("Please specify a correct page index to start from.")
@@ -129,41 +127,58 @@ package test.PageFlip
 
         }
 
+
+    ////////////////////////////////////////////////////////////////////////////////////
+                                    //BASIC FUNCTION//
+    ////////////////////////////////////////////////////////////////////////////////////
         private function tweenPageTurn(turnOrientation:int = NEXT):void
         {
             touchable = false;
+
             if (turnOrientation == NEXT)
             {
-                cacheImage.swapTexture(rasterizeDispObj(pages[nextPage]),false);
-                setChildIndex(cacheImage,0);
-                flipImage.swapTexture(rasterizeDispObj(pages[currentPage]),false);
-                setChildIndex(flipImage,1);
-
+                cacheImage.swapTexture(rasterizeDispObj(pages[nextPage]));
+                flipImage.swapTexture(rasterizeDispObj(pages[currentPage]));
             }
             else
             {
-                cacheImage.swapTexture(rasterizeDispObj(pages[currentPage]),false);
-                setChildIndex(cacheImage,0);
-                flipImage.swapTexture(rasterizeDispObj(pages[previousPage]),false);
-                setChildIndex(flipImage,1);
-                trace(pageOrientation);
+                cacheImage.swapTexture(rasterizeDispObj(pages[currentPage]));
+                flipImage.swapTexture(rasterizeDispObj(pages[previousPage]));
+
             }
+            if(useQuad)
+            {
+                quadBatch.reset();
+                quadBatch.addImage(cacheImage);
+                quadBatch.addImage(flipImage);
+            }
+            else
+            {
+                setChildIndex(cacheImage,0);
+                setChildIndex(flipImage,1);
+            }
+
             var step:Number = 0.1*(-turnOrientation);
             addEventListener(Event.ENTER_FRAME,executeMotion);
             function executeMotion(event:Event):void
             {
+
                 pageOrientation += step;
-                trace(pageOrientation);
                 if (pageOrientation < 0 || pageOrientation > 1)
                 {
                     removeEventListener(Event.ENTER_FRAME,executeMotion);
                     tweenCompleteHandler(turnOrientation);
                 }
                 flipImage.setLocation(pageOrientation);
+                if (useQuad)
+                {
+                    quadBatch.reset();
+                    quadBatch.addImage(cacheImage);
+                    quadBatch.addImage(flipImage);
+                }
+
             }
         }
-
-    //TODO: make sure the Previous flip shows the animation
 
 
         /**Reset after the animation is finished */
@@ -181,9 +196,17 @@ package test.PageFlip
             previousPage = currentPage-1;
             nextPage = currentPage+1;
 
-            cacheImage.swapTexture(rasterizeDispObj(pages[currentPage]),false);
-            setChildIndex(cacheImage,0);
-            setChildIndex(flipImage,1);
+            cacheImage.swapTexture(rasterizeDispObj(pages[currentPage]));
+            if(useQuad)
+            {
+                quadBatch.addImage(cacheImage);
+                quadBatch.addImage(flipImage);
+            }
+            else
+            {
+                setChildIndex(cacheImage,0);
+                setChildIndex(flipImage,1);
+            }
             touchable = true;
         }
 
@@ -208,5 +231,23 @@ package test.PageFlip
         }
 
 
-	}
+        public function canTurnTo(pageNo:int):Boolean
+        {
+            var valid:Boolean = false;
+            if (pageIsValid(pageNo) && pageNo!=currentPage)
+                valid = true;
+            return valid;
+        }
+
+
+        public function pageIsValid(pageNo:int):Boolean
+        {
+            var valid:Boolean = false;
+            if (pageNo>=0 && pageNo<pageCount)
+                valid = true;
+            return valid;
+        }
+
+
+    }
 }
