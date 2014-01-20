@@ -1,38 +1,55 @@
 package test.PageFlip
 {
-import flash.geom.Point;
-
-import starling.display.Image;
-	import starling.display.Sprite;
+    import starling.display.Image;
 	import starling.textures.Texture;
 
-import test.Proportions;
 
 
 public class ImagePage extends Image
 	{
 
 
-        private var initialImgWidth:Number;
-        private var initialImgHeight:Number;
+        private var initialWidth:Number;
+        private var initialHeight:Number;
 
 		/**@private*/
 		public function ImagePage(texture:Texture)
 		{
 			super(texture);
-            initialImgWidth = super.width;
-            initialImgHeight = super.height;
+            initialHeight = super.height;
+            initialWidth = super.width;
 		}
 
 
+        override public function set height(value:Number):void
+        {
+            initialHeight = value;
+            super.height = initialHeight;
+        }
 
-        public function swapTexture(newTexture:Texture):void
+        override public function set width(value:Number):void
+        {
+            initialWidth = value;
+            super.width = initialWidth;
+        }
+
+
+
+        public function swapTexture(newTexture:Texture, setUpwards:Boolean = false):void
         {
             this.texture = newTexture;
-            super.width = initialImgWidth;
-            super.height = initialImgHeight;
             readjustSize();
+            if(setUpwards)
+                setLocation(0);
+            else
+                setLocation(1);
+
+            initialHeight = super.height;
+            initialWidth = super.width;
+
         }
+
+
 
 		/**
 		 * Set the vertex position
@@ -40,14 +57,13 @@ public class ImagePage extends Image
 		 */		
 		public function setLocation(flipingPageLocation:Number):void
 		{
-			var fpl:Number = flipingPageLocation;//Math.abs(flipingPageLocation);
-			var pageOffset:Number = (initialImgHeight/8);
+			var fpl:Number = Math.abs(flipingPageLocation);
+			var pageOffset:Number = (initialHeight/8);
             var top:Number = 0;
-            var bottom:Number = initialImgHeight;
+            var bottom:Number = initialHeight;
             var left:Number = 0;
-            var pageXDeviation:Number =  initialImgWidth*fpl;
+            var pageXDeviation:Number =  initialWidth*fpl;
             var pageYDeviation:Number = pageOffset*(1-fpl);
-
             /*
              Image and/or Quad are made of 2 triangles
             0 - 1

@@ -38,12 +38,9 @@ package test.PageFlip
         private var nextPage:int;
         private var currentPage:int;
 
-        private var topImage:Image;
-        private var bottomImage:Image;
+//        private var topImage:ImagePage;
+        private var cacheImage:ImagePage;
         private var flipImage:ImagePage;
-//        private var quadBatch:QuadBatch;
-
-
 
 		/**@private*/
 		public function PageFlipContainer(pages:Vector.<DisplayObject>,bookWidth:Number,bookHeight:Number,startOnPage:int = 0)
@@ -91,28 +88,11 @@ package test.PageFlip
             if (pageIsValid(currentPage))
             {
 
-                bottomImage = new Image(rasterizeDispObj(pages[currentPage]));
-                bottomImage.x = bottomImage.y = 0;
-                bottomImage.width = bookWidth;
-                bottomImage.height = bookHeight;
-                addChildAt(bottomImage,0);
+                cacheImage = new ImagePage(rasterizeDispObj(pages[currentPage]));
+                addChild(cacheImage);
 
                 flipImage = new ImagePage(rasterizeDispObj(pages[currentPage]));
-                flipImage.x = flipImage.y = 0;
-                flipImage.width = bookWidth;
-                flipImage.height = bookHeight;
                 addChild(flipImage);
-
-                topImage = new Image(rasterizeDispObj(pages[currentPage]));
-                topImage.x = topImage.y = 0;
-                topImage.width = bookWidth;
-                topImage.height = bookHeight;
-                topImage.visible = false;
-                addChildAt(topImage,0);
-
-//                quadBatch = new QuadBatch();
-//                addChild(quadBatch);
-
             }
             else
                 throw new Error ("Please specify a correct page index to start from.")
@@ -151,51 +131,44 @@ package test.PageFlip
 
         private function tweenPageTurn(turnOrientation:int = NEXT):void
         {
-//    	    needUpdate = true;
             touchable = false;
-//            flipImgTexture = rasterizeDispObj(pages[currentPage]);
-//            flipImage.texture =
-
-
             if (turnOrientation == NEXT)
             {
-                flipImage.swapTexture(rasterizeDispObj(pages[currentPage]));
-                bottomImage.texture = rasterizeDispObj(pages[nextPage]);
-                topImage.visible = false;
+                cacheImage.swapTexture(rasterizeDispObj(pages[nextPage]),false);
+                setChildIndex(cacheImage,0);
+                flipImage.swapTexture(rasterizeDispObj(pages[currentPage]),false);
+                setChildIndex(flipImage,1);
+
             }
             else
             {
-                bottomImage.texture = rasterizeDispObj(pages[currentPage]);
-                flipImage.swapTexture(rasterizeDispObj(pages[previousPage]));
-                topImage.visible = true;
-                topImage.texture = rasterizeDispObj(pages[previousPage]);
+                cacheImage.swapTexture(rasterizeDispObj(pages[currentPage]),false);
+                setChildIndex(cacheImage,0);
+                flipImage.swapTexture(rasterizeDispObj(pages[previousPage]),false);
+                setChildIndex(flipImage,1);
+                trace(pageOrientation);
             }
             var step:Number = 0.1*(-turnOrientation);
             addEventListener(Event.ENTER_FRAME,executeMotion);
             function executeMotion(event:Event):void
             {
                 pageOrientation += step;
-
+                trace(pageOrientation);
                 if (pageOrientation < 0 || pageOrientation > 1)
                 {
                     removeEventListener(Event.ENTER_FRAME,executeMotion);
-
-                    flipImage.setLocation(pageOrientation);
                     tweenCompleteHandler(turnOrientation);
                 }
-                else
-                {
-                    flipImage.setLocation(pageOrientation);
-                }
+                flipImage.setLocation(pageOrientation);
             }
         }
 
+    //TODO: make sure the Previous flip shows the animation
 
 
         /**Reset after the animation is finished */
         private function tweenCompleteHandler(justWent:int = NEXT):void
         {
-
             if (justWent == NEXT){
                 pageOrientation = 0;
                 currentPage = nextPage;
@@ -207,7 +180,10 @@ package test.PageFlip
             flipImage.setLocation(pageOrientation);
             previousPage = currentPage-1;
             nextPage = currentPage+1;
-            //TODO: Later on, set the next and previous flip images so that they are ready for the next animation
+
+            cacheImage.swapTexture(rasterizeDispObj(pages[currentPage]),false);
+            setChildIndex(cacheImage,0);
+            setChildIndex(flipImage,1);
             touchable = true;
         }
 
@@ -228,7 +204,6 @@ package test.PageFlip
             }
 //            else
 //                throw new Error("Only Textures or Sprites are allowed to be added on PageFlipContainer as pages.");
-
             return rasterized;
         }
 

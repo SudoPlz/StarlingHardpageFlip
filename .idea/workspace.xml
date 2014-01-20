@@ -67,7 +67,18 @@
       <file leaf-file-name="PageFlipContainer.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="103" selection-end="103" vertical-scroll-proportion="0.12908778" vertical-offset="0" max-vertical-offset="3630">
+            <state line="12" column="24" selection-start="255" selection-end="255" vertical-scroll-proportion="0.3243243" vertical-offset="0" max-vertical-offset="3255">
+              <folding>
+                <element signature="e#29#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImagePage.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="40" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -91,12 +102,12 @@
         <option value="$PROJECT_DIR$/src/test/pf/ImagePage.as" />
         <option value="$PROJECT_DIR$/src/test/Game.as" />
         <option value="$PROJECT_DIR$/src/test/PageFlip/ShadowUtil.as" />
+        <option value="$PROJECT_DIR$/src/test/PageFlip/ImagePage.as" />
         <option value="$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
     <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="701" />
@@ -127,7 +138,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -220,7 +231,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -343,6 +354,25 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
       <option name="BCName" value="" />
       <option name="IOSSimulatorSdkPath" value="" />
@@ -376,25 +406,6 @@
       <option name="screenWidth" value="0" />
       <option name="url" value="http://" />
       <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="testStarlingBook" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -472,15 +483,18 @@
       <workItem from="1389785122721" duration="5852000" />
       <workItem from="1389830723745" duration="1048000" />
       <workItem from="1389835271576" duration="394000" />
-      <workItem from="1389947187308" duration="8816000" />
+      <workItem from="1389947187308" duration="8892000" />
+      <workItem from="1389975507802" duration="2351000" />
+      <workItem from="1389997424268" duration="74000" />
+      <workItem from="1390216320992" duration="1455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57378000" />
+    <option name="totallyTimeSpent" value="61334000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="22" width="1280" height="701" extended-state="0" />
+    <frame x="0" y="22" width="1280" height="701" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -488,9 +502,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5073892" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37766832" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -498,14 +511,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21001616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2197092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -526,21 +540,64 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="flex">
           <url>file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as</url>
-          <line>223</line>
+          <line>200</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="134" />
+      <option name="time" value="150" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="35" selection-start="7334" selection-end="7334" vertical-scroll-proportion="0.0" vertical-offset="3465" max-vertical-offset="6990">
+        <state line="168" column="59" selection-start="5259" selection-end="5259" vertical-scroll-proportion="0.0" vertical-offset="2517" max-vertical-offset="3300">
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="24" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="945">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="59" selection-start="5259" selection-end="5259" vertical-scroll-proportion="0.0" vertical-offset="2427" max-vertical-offset="3300">
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="24" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="80" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="3630">
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="35" selection-start="7334" selection-end="7334" vertical-scroll-proportion="0.0" vertical-offset="3465" max-vertical-offset="6990">
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -554,16 +611,16 @@
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="0" selection-start="212" selection-end="2006" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1275">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="208" column="47" selection-start="6462" selection-end="6462" vertical-scroll-proportion="0.0" vertical-offset="2979" max-vertical-offset="7260">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -577,16 +634,16 @@
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="12" selection-start="352" selection-end="692" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1170">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="206" column="34" selection-start="6513" selection-end="6513" vertical-scroll-proportion="0.0" vertical-offset="3054" max-vertical-offset="7155">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -600,39 +657,41 @@
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="13" selection-start="963" selection-end="963" vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1080">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="236" column="13" selection-start="7210" selection-end="7210" vertical-scroll-proportion="0.0" vertical-offset="2866" max-vertical-offset="6930">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="33" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1080">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="237" column="28" selection-start="7427" selection-end="7427" vertical-scroll-proportion="0.0" vertical-offset="3471" max-vertical-offset="7050">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="280" column="38" selection-start="8847" selection-end="8847" vertical-scroll-proportion="0.0" vertical-offset="4245" max-vertical-offset="6360">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -646,80 +705,80 @@
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="64" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="1170">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="187" column="37" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5160">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="64" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="1170">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="187" column="37" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5160">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="64" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="803" max-vertical-offset="1170">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="187" column="37" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5160">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="64" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="187" column="37" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5160">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="64" selection-start="1559" selection-end="1559" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1170">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="187" column="37" selection-start="5329" selection-end="5329" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="5160">
-          <folding />
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -737,39 +796,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/starling.swc!/library.swf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="653" column="23" selection-start="34344" selection-end="34344" vertical-scroll-proportion="0.3323077" vertical-offset="9687" max-vertical-offset="33570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/fairy0.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.22547331" vertical-offset="124" max-vertical-offset="1035">
-          <folding>
-            <element signature="e#24#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="38" selection-start="721" selection-end="721" vertical-scroll-proportion="0.56798625" vertical-offset="0" max-vertical-offset="581">
-          <folding />
-        </state>
+        <state line="31" column="38" selection-start="721" selection-end="721" vertical-scroll-proportion="0.56798625" vertical-offset="0" max-vertical-offset="581" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ShadowUtil.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="290" selection-end="290" vertical-scroll-proportion="0.17383821" vertical-offset="34" max-vertical-offset="615">
-          <folding />
-        </state>
+        <state line="12" column="31" selection-start="290" selection-end="290" vertical-scroll-proportion="0.17383821" vertical-offset="34" max-vertical-offset="615" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Game.as">
@@ -779,10 +818,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/starling.swc!/library.swf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="36" selection-start="4450" selection-end="4462" vertical-scroll-proportion="0.37573963" vertical-offset="1148" max-vertical-offset="33570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/PageFlip/ImagePage.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="40" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/PageFlip/PageFlipContainer.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="103" selection-end="103" vertical-scroll-proportion="0.12908778" vertical-offset="0" max-vertical-offset="3630">
-          <folding />
+        <state line="12" column="24" selection-start="255" selection-end="255" vertical-scroll-proportion="0.3243243" vertical-offset="0" max-vertical-offset="3255">
+          <folding>
+            <element signature="e#29#67#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
