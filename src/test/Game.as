@@ -1,5 +1,8 @@
 package test
 {
+import flash.display.BitmapData;
+import flash.display.Shape;
+
 import starling.display.Button;
 import starling.display.DisplayObject;
 import starling.display.Image;
@@ -43,7 +46,26 @@ import test.PageFlip.PageFlipContainer;
             textures = new Vector.<DisplayObject>();
 
 
-            textures.push(new Image(Texture.fromBitmap(new fairy0(),false)));
+            var spr:Sprite = new Sprite();
+            spr.addChild(new Image(Texture.fromBitmap(new fairy0())));
+
+
+            var shape:Shape;
+            shape = new Shape();
+            shape.graphics.beginFill(Math.random()*0xFFFFFF);
+            var radius:Number = 50;
+            shape.graphics.drawCircle(radius+2,radius+2,radius);
+            shape.graphics.endFill();
+
+            var canvas:BitmapData = new BitmapData(shape.width+4,shape.height+4,true,0xFF0000);
+            shape.x = 2;
+            shape.y= 2;
+            canvas.draw(shape);
+            var texture:Texture = Texture.fromBitmapData(canvas);
+            var image:Image = new Image(texture);
+            spr.addChild(image);
+
+            textures.push(spr);
             textures.push(new Image(Texture.fromBitmap(new fairy1(),false)));
             textures.push(new Image(Texture.fromBitmap(new fairy2(),false)));
             textures.push(new Image(Texture.fromBitmap(new fairy3(),false)));
